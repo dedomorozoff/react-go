@@ -1,0 +1,187 @@
+.actionBar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.searchBox {
+  background: white;
+  border: 1px solid var(--border);
+  padding: 8px 16px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 300px;
+}
+
+.searchBox input {
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+.projectList {
+  padding: 8px;
+  overflow: hidden;
+}
+
+.dataTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dataTable th {
+  text-align: left;
+  padding: 16px;
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.875rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.dataTable td {
+  padding: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.projectTitle {
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.projectDesc {
+  color: var(--text-muted);
+}
+
+.statusBadge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.actions {
+  color: var(--text-muted);
+  text-align: right;
+  white-space: nowrap;
+}
+
+.iconBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-muted);
+  padding: 6px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.iconBtn:hover { background: var(--bg-main); color: var(--text-main); }
+.danger:hover { background: #fef2f2; color: #ef4444; }
+
+.statusFilter {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 8px 12px;
+  background: white;
+}
+
+.errorBanner {
+  background: #fef2f2;
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  padding: 12px 16px;
+  border-radius: 10px;
+  margin-bottom: 16px;
+}
+
+.loading {
+  color: var(--text-muted);
+  padding: 24px 0;
+}
+
+.emptyState {
+  padding: 48px;
+  text-align: center;
+  color: var(--text-muted);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.modal {
+  width: 100%;
+  max-width: 480px;
+  padding: 24px;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.modalHeader h3 {
+  margin: 0;
+}
+
+.modalForm {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modalForm label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.modalForm input, .modalForm textarea, .modalForm select {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 1rem;
+  outline: none;
+  font-family: inherit;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.btnSecondary {
+  background: white;
+  border: 1px solid var(--border);
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+@media (max-width: 720px) {
+  .actionBar {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .searchBox {
+    width: 100%;
+  }
+}

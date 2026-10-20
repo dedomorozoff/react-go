@@ -1,0 +1,340 @@
+.landing {
+  background-color: #ffffff;
+  color: var(--text-main);
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Navbar */
+.navbar {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  z-index: 100;
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: var(--text-main);
+}
+
+.iconBrand {
+  color: var(--primary);
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.navLinks a:not(.btn-primary) {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.navLinks a:not(.btn-primary):hover {
+  color: var(--primary);
+}
+
+/* Hero Section */
+.hero {
+  padding: 160px 0 100px;
+  background: radial-gradient(circle at top right, rgba(99, 102, 241, 0.05), transparent),
+              radial-gradient(circle at bottom left, rgba(245, 158, 11, 0.05), transparent);
+}
+
+.hero .container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.heroContent {
+  flex: 1;
+}
+
+.gradientText {
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  background: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #f43f5e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.heroActions {
+  display: flex;
+  gap: 16px;
+}
+
+.btnSecondary {
+  background: white;
+  border: 1px solid var(--border);
+  color: var(--text-main);
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btnSecondary:hover {
+  background: var(--bg-main);
+  border-color: var(--text-muted);
+}
+
+/* btn-lg comes from the shared .btn-lg class defined below */
+.landing :global(.btn-lg) {
+  padding: 16px 32px;
+  font-size: 1.125rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.heroVisual {
+  flex: 1;
+  perspective: 1000px;
+}
+
+.codeCard {
+  padding: 24px;
+  transform: rotate3d(1, -1, 0, 15deg);
+  transition: transform 0.5s;
+}
+
+.codeCard:hover {
+  transform: rotate3d(0, 0, 0, 0deg);
+}
+
+.codeHeader {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.dotRed, .dotYellow, .dotGreen {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.dotRed { background: #ff5f56; }
+.dotYellow { background: #ffbd2e; }
+.dotGreen { background: #27c93f; }
+
+.codeCard pre {
+  background: #1e293b;
+  color: #f8fafc;
+  padding: 20px;
+  border-radius: 12px;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9rem;
+}
+
+.keyword { color: #f472b6; }
+.func { color: #38bdf8; }
+.string { color: #4ade80; }
+.comment { color: #64748b; }
+
+/* Features */
+.features {
+  padding: 100px 0;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.badge {
+  background: #f0f1ff;
+  color: var(--primary);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.sectionHeader h2 {
+  font-size: 2.5rem;
+  margin-top: 16px;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.featureCard {
+  padding: 40px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.featureCard:hover {
+  transform: translateY(-10px);
+}
+
+.featureIcon {
+  margin-bottom: 24px;
+}
+
+.featureCard h3 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+.featureCard p {
+  color: var(--text-muted);
+}
+
+/* Stack Section */
+.stack {
+  padding: 100px 0;
+  background: #fcfcfd;
+}
+
+.stackGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.stackItem {
+  text-align: center;
+}
+
+.stackBox {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 24px;
+  transition: transform 0.3s;
+}
+
+.stackItem:hover .stackBox {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.stackItem h4 {
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+}
+
+.stackItem p {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.customStackIcon {
+  background: #f1f5f9;
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Floating Action Button */
+.fab {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background: var(--primary);
+  color: white;
+  padding: 16px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  box-shadow: 0 12px 32px rgba(99, 102, 241, 0.4);
+  z-index: 1000;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  overflow: hidden;
+  max-width: 56px;
+}
+
+.fab:hover {
+  max-width: 200px;
+  padding: 16px 24px;
+  transform: translateY(-5px);
+  background: var(--primary-hover);
+}
+
+.fabText {
+  font-weight: 600;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.fab:hover .fabText {
+  opacity: 1;
+}
+
+.footer {
+  padding: 40px 0;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  color: var(--text-muted);
+}
+
+@media (max-width: 900px) {
+  .hero .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .heroVisual {
+    width: 100%;
+  }
+  .featuresGrid {
+    grid-template-columns: 1fr;
+  }
+  .gradientText {
+    font-size: 2.5rem;
+  }
+  .fab {
+    bottom: 24px;
+    right: 24px;
+  }
+}
